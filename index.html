@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>WEB TECHNO MACHINE v41.11b</title>
+<title>WEB TECHNO MACHINE v41.12</title>
 <style>
 :root{--o:#ff6416;--panel:#3b3b3b;--panel2:#2b2b2b;--edge:#777;--cream:#efe4bd;--beat:#46515b}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -132,13 +132,13 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 
 
-/* v41.11b channel color logic */
+/* v41.12 channel color logic */
 .app.kit909 .channel{background:linear-gradient(#53585d,#363b40)!important}
 .app.kit909 .channel.alt{background:linear-gradient(#344a56,#263b46)!important;border-color:#66899a!important}
 .app.classic808 .channel.alt{background:linear-gradient(#263b45,#1c3039)!important;border-color:#5c7f90!important}
 .app.classic808.kit909 .channel.alt{background:linear-gradient(#354c58,#263b46)!important;border-color:#7496a6!important}
 
-/* v41.11b poly vertical fit */
+/* v41.12 poly vertical fit */
 .polyPanel h3{font-size:11px!important;line-height:12px!important;margin:1px 0 4px!important}
 .polyPanel{padding:6px!important}
 .oscArea{padding:4px!important}
@@ -160,7 +160,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 .polyEqBox .polyLowerControls .knob{width:36px!important;height:36px!important}
 .polyLowerFx{align-items:flex-start!important}
 
-/* v41.11b: sequencers always use TECH look */
+/* v41.12: sequencers always use TECH look */
 .app.classic808 #seq .cell,.app.classic808 #bassGrid .cell,.app.classic808 #polyGrid .cell,
 .app.classic808 #bassAccent .cell,.app.classic808 #bassSlide .cell{
  padding:0!important;border:1px solid #555!important;border-radius:0!important;
@@ -221,7 +221,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 .polyLowerFx{display:none!important}
 
-/* v41.11b POLY main controls: fixed 3-row / 4-column layout */
+/* v41.12 POLY main controls: fixed 3-row / 4-column layout */
 #polyMainControls{
   display:grid!important;
   grid-template-columns:repeat(4,minmax(0,1fr))!important;
@@ -272,7 +272,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 
 
-/* v41.11b — definitive POLY EQ / FX layout */
+/* v41.12 — definitive POLY EQ / FX layout */
 .polyPanel{
   display:flex!important;
   flex-direction:column!important;
@@ -412,7 +412,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 
 
-/* v41.11b — move POLY EQ / FX upward */
+/* v41.12 — move POLY EQ / FX upward */
 .polyPanelBottom{
   margin-top:6px!important;
   align-self:stretch!important;
@@ -427,11 +427,11 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   margin:2px 0!important;
 }
 
-/* v41.11b POLY delay: TIME / FEEDBACK / WET / TONE */
+/* v41.12 POLY delay: TIME / FEEDBACK / WET / TONE */
 
 
 
-/* v41.11b POLY DELAY — TIME / FEEDBACK / WET / TONE, aligned with other FX */
+/* v41.12 POLY DELAY — TIME / FEEDBACK / WET / TONE, aligned with other FX */
 #polyDelayPane{
   position:relative!important;
 }
@@ -468,7 +468,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 
 
-/* v41.11b cursor performance */
+/* v41.12 cursor performance */
 .cell.now{
   transition:none!important;
   filter:none!important;
@@ -478,7 +478,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   transition:none!important;
 }
 
-/* v41.11b compositor playhead: note density cannot trigger grid repaint */
+/* v41.12 compositor playhead: note density cannot trigger grid repaint */
 #seq,#bassGrid,#polyGrid{position:relative!important}
 .wtmPlayhead{
  position:absolute!important;
@@ -496,7 +496,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 
 
-/* v41.11b transport recovery: lightweight cursor */
+/* v41.12 transport recovery: lightweight cursor */
 .cell.now{
   outline:1px solid rgba(235,235,235,.72)!important;
   outline-offset:-1px!important;
@@ -505,11 +505,11 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   transition:none!important;
 }
 
-/* v41.11b: single cursor system only */
+/* v41.12: single cursor system only */
 .wtmPlayhead{display:none!important}
 
 
-/* v41.11b — POLY viewport fit */
+/* v41.12 — POLY viewport fit */
 .synthWrap{
   height:828px!important;
   min-height:828px!important;
@@ -542,50 +542,166 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 
 
-/* v41.11b — POLY compact layout, no audio-engine changes */
-.polyOscLfoWrap{
-  margin-top:3px!important;
-  padding-top:3px!important;
-  border-top:1px solid #596168!important;
-  display:grid!important;
-  grid-template-columns:44px 1fr!important;
-  align-items:center!important;
-  gap:3px!important;
+/* v41.12 — independent dual oscillator layout */
+.polyPanel{
+  display:flex!important;
+  flex-direction:column!important;
+  padding:5px!important;
+  height:100%!important;
+  min-height:0!important;
+  box-sizing:border-box!important;
 }
-.polyOscLfoTitle{
+.polyPanel h3{
+  font-size:12px!important;
+  margin:0 0 3px!important;
+}
+.dualOscArea{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:4px!important;
+}
+.oscBox{
+  border:1px solid #68737c!important;
+  background:#2d3338!important;
+  padding:3px!important;
+  box-sizing:border-box!important;
+}
+.oscBoxTitle{
   color:#ffd071!important;
-  font-size:7px!important;
+  font-size:9px!important;
   font-weight:900!important;
-  line-height:8px!important;
-  text-align:center!important;
+  margin:0 0 2px!important;
 }
-#polyOscLfoControls{min-width:0!important}
-.polyOscLfoCard{
+.oscBox .polyWaves{
   display:grid!important;
-  grid-template-columns:40px 1fr 1fr!important;
+  grid-template-columns:repeat(3,1fr)!important;
   gap:2px!important;
-  align-items:center!important;
+  margin-bottom:2px!important;
 }
-.polyOscLfoCard .lfoWave{
-  min-width:0!important;
+.oscBox .polyWaves .btn{
   padding:3px 2px!important;
   font-size:7px!important;
 }
-.polyOscLfoCard .knob{
-  width:29px!important;height:29px!important;margin:0 auto!important;
+.oscControlGrid{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:2px!important;
+  text-align:center!important;
 }
-.polyOscLfoCard .knob:after{
-  left:11px!important;height:10px!important;transform-origin:1px 12px!important;
+.oscControlGrid>div:nth-child(n+6){
+  grid-column:auto!important;
 }
-.polyOscLfoCard .lab,.polyOscLfoCard .val{
+.oscControlGrid .knob{
+  width:31px!important;height:31px!important;margin:0 auto!important;
+}
+.oscControlGrid .knob:after{
+  left:12px!important;height:11px!important;transform-origin:1px 14px!important;
+}
+.oscControlGrid .lab,.oscControlGrid .val{
+  font-size:5.8px!important;line-height:6.5px!important;
+}
+
+.polyUtilityRow{
+  display:grid!important;
+  grid-template-columns:1fr 1.7fr!important;
+  gap:4px!important;
+  margin-top:4px!important;
+}
+.polyUtilityControls{
+  display:grid!important;
+  grid-template-columns:repeat(2,1fr)!important;
+  gap:3px!important;
+  text-align:center!important;
+  border:1px solid #666!important;
+  background:#30363a!important;
+  padding:3px!important;
+}
+.polyUtilityControls .knob{
+  width:32px!important;height:32px!important;margin:0 auto!important;
+}
+.polyUtilityControls .knob:after{
+  left:12px!important;height:11px!important;transform-origin:1px 14px!important;
+}
+.polyUtilityControls .lab,.polyUtilityControls .val{
   font-size:6px!important;line-height:7px!important;
 }
+.polyOscLfoWrap{
+  height:54px!important;
+  min-height:54px!important;
+  box-sizing:border-box!important;
+  border:1px solid #666!important;
+  background:#30363a!important;
+  padding:2px 4px!important;
+  display:grid!important;
+  grid-template-columns:48px 1fr!important;
+  align-items:center!important;
+  gap:4px!important;
+}
+.polyOscLfoTitle{
+  color:#f2f2f2!important;
+  font-size:14px!important;
+  line-height:14px!important;
+  font-weight:900!important;
+  text-align:left!important;
+}
+#polyOscLfoControls{width:100%!important}
+.polyOscLfoCard{
+  display:grid!important;
+  grid-template-columns:42px 1fr 1fr!important;
+  gap:5px!important;
+  align-items:center!important;
+}
+.polyOscLfoCard .lfoWave{
+  min-width:38px!important;height:24px!important;padding:2px 4px!important;font-size:7px!important;
+}
+.polyOscLfoCard .knob{
+  width:34px!important;height:34px!important;margin:0 auto!important;
+}
+.polyOscLfoCard .knob:after{
+  left:13px!important;height:12px!important;transform-origin:1px 15px!important;
+}
+.polyOscLfoCard .lab,.polyOscLfoCard .val{font-size:6px!important;line-height:7px!important}
+
+#polyMainControls{
+  display:grid!important;
+  grid-template-columns:repeat(4,1fr)!important;
+  gap:2px!important;
+}
+#polyMainControls .knob{
+  width:34px!important;height:34px!important;
+}
+#polyMainControls .knob:after{
+  left:13px!important;height:12px!important;transform-origin:1px 15px!important;
+}
+#polyMainControls .lab,#polyMainControls .val{
+  font-size:6px!important;line-height:7px!important;
+}
+.polyDivider{margin:2px 0!important}
+.polyLfoTitle{font-size:7px!important;margin:1px 0!important}
 
 .polyLfoControls{
   display:grid!important;
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
   grid-template-rows:repeat(2,54px)!important;
   gap:3px!important;
+}
+.polyLfoCard{
+  display:grid!important;
+  grid-template-columns:42px 36px 1fr 1fr!important;
+  align-items:center!important;
+  gap:2px!important;
+  border:1px solid #666!important;
+  background:#30363a!important;
+  padding:2px!important;
+  min-width:0!important;
+  height:54px!important;
+  box-sizing:border-box!important;
+}
+.polyLfoCard .knob{
+  width:31px!important;height:31px!important;
+}
+.polyLfoCard .knob:after{
+  left:12px!important;height:10px!important;transform-origin:1px 13px!important;
 }
 .polyEqLfoSlot{
   border:1px solid #666!important;
@@ -594,16 +710,14 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   min-width:0!important;
   height:54px!important;
   box-sizing:border-box!important;
-  overflow:hidden!important;
 }
 .polyEqLfoSlot .polyBoxTitle{
-  font-size:7px!important;line-height:8px!important;margin:0 0 1px 0!important;
+  font-size:7px!important;line-height:8px!important;margin:0!important;
 }
 .polyEqLfoSlot .polyLowerControls{
   display:grid!important;
   grid-template-columns:repeat(3,1fr)!important;
   gap:3px!important;
-  align-items:start!important;
   text-align:center!important;
 }
 .polyEqLfoSlot .knob{
@@ -612,9 +726,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 .polyEqLfoSlot .knob:after{
   left:13px!important;height:11px!important;transform-origin:1px 14px!important;
 }
-.polyEqLfoSlot .lab,.polyEqLfoSlot .val{
-  font-size:6px!important;line-height:7px!important;
-}
+.polyEqLfoSlot .lab,.polyEqLfoSlot .val{font-size:6px!important;line-height:7px!important}
 
 .polyPanelBottom{
   margin-top:3px!important;
@@ -623,134 +735,29 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 .polyFxRight{
   width:100%!important;
-  height:145px!important;
-  min-height:145px!important;
-  max-height:145px!important;
+  height:126px!important;
+  min-height:126px!important;
+  max-height:126px!important;
   box-sizing:border-box!important;
+}
+.polyFxRight .tabs{
+  height:22px!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,1fr)!important;
+}
+.polyFxRight .tabs .tab{
+  height:22px!important;
+  font-size:7px!important;
+  padding:2px!important;
 }
 .polyFxRight .pane{
-  height:108px!important;
-  min-height:108px!important;
-  max-height:108px!important;
+  height:96px!important;
+  min-height:96px!important;
+  max-height:96px!important;
 }
 .polyFxRight .fxgrid{
-  height:104px!important;
-  padding-top:7px!important;
-}
-
-
-/* v41.11b — LFO OSC is the grid item immediately to the right of PORTA */
-#polyOscControls{
-  grid-template-columns:repeat(4,1fr)!important;
-}
-#polyOscControls .polyOscLfoWrap{
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  display:block!important;
-  min-width:0!important;
-  width:100%!important;
-}
-#polyOscControls .polyOscLfoTitle{
-  height:7px!important;
-  margin:0!important;
-  font-size:6.5px!important;
-  line-height:7px!important;
-  text-align:center!important;
-}
-#polyOscLfoControls{
-  display:grid!important;
-  grid-template-columns:24px 1fr 1fr!important;
-  gap:1px!important;
-  align-items:center!important;
-  min-width:0!important;
-}
-#polyOscLfoControls .polyOscLfoCard{
-  display:contents!important;
-}
-#polyOscLfoControls .lfoWave{
-  min-width:0!important;
-  padding:2px 1px!important;
-  font-size:6px!important;
-}
-#polyOscLfoControls .knob{
-  width:25px!important;height:25px!important;margin:0 auto!important;
-}
-#polyOscLfoControls .knob:after{
-  left:10px!important;height:9px!important;transform-origin:1px 11px!important;
-}
-#polyOscLfoControls .lab,#polyOscLfoControls .val{
-  font-size:5.5px!important;line-height:6px!important;
-}
-
-
-/* v41.11b — LFO OSC: same visual scale as lower LFO2, filling space right of PORTA */
-#polyOscControls{
-  grid-template-columns:repeat(4,minmax(0,1fr))!important;
-}
-/* PORTA is the 12th normal oscillator control */
-#polyOscControls > div:nth-child(12){
-  grid-column:1 / 2!important;
-}
-#polyOscControls > .polyOscLfoWrap{
-  grid-column:2 / 5!important;
-  height:54px!important;
-  min-height:54px!important;
-  box-sizing:border-box!important;
-  border:1px solid #666!important;
-  background:#30363a!important;
-  padding:2px 4px!important;
-  margin:0!important;
-  display:grid!important;
-  grid-template-columns:48px 1fr!important;
-  align-items:center!important;
-  gap:4px!important;
-}
-#polyOscControls .polyOscLfoTitle{
-  color:#f2f2f2!important;
-  font-size:15px!important;
-  line-height:16px!important;
-  font-weight:900!important;
-  text-align:left!important;
-  height:auto!important;
-  margin:0!important;
-}
-#polyOscLfoControls{
-  display:block!important;
-  width:100%!important;
-}
-#polyOscLfoControls .polyOscLfoCard{
-  display:grid!important;
-  grid-template-columns:42px 1fr 1fr!important;
-  gap:5px!important;
-  align-items:center!important;
-  width:100%!important;
-}
-#polyOscLfoControls .lfoWave{
-  min-width:38px!important;
-  height:24px!important;
-  padding:2px 4px!important;
-  font-size:7px!important;
-}
-#polyOscLfoControls .knob{
-  width:34px!important;
-  height:34px!important;
-  margin:0 auto!important;
-}
-#polyOscLfoControls .knob:after{
-  left:13px!important;
-  height:12px!important;
-  transform-origin:1px 15px!important;
-}
-#polyOscLfoControls .lab{
-  font-size:6px!important;
-  line-height:7px!important;
-  text-align:center!important;
-}
-#polyOscLfoControls .val{
-  font-size:6px!important;
-  line-height:7px!important;
-  text-align:center!important;
+  height:92px!important;
+  padding:4px 1px!important;
 }
 
 </style>
@@ -761,7 +768,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 window.addEventListener("unhandledrejection",function(e){var x=document.getElementById("bootError");if(x){x.style.display="block";x.textContent="Promiseエラー: "+String(e.reason||"unknown");}});</script>
 <div id="fit" class="fit"><div class="app">
 <header class="metal top">
-  <div class="title"><span>WEB TECHNO</span><span>MACHINE <small>v41.11b</small></span></div>
+  <div class="title"><span>WEB TECHNO</span><span>MACHINE <small>v41.12</small></span></div>
   <div class="pages"><button id="drumPageBtn" class="active">DRUM</button><button id="bassPageBtn">BASS</button><button id="synthPageBtn">POLY</button></div>
   <div class="modes kitMini"><button id="m808" class="active">808</button><button id="m909">909</button></div><button class="btn uiModeBtn" id="uiModeBtn">UI 808</button>
   <button class="btn play" id="playTop">▶ PLAY</button>
@@ -824,23 +831,41 @@ window.addEventListener("unhandledrejection",function(e){var x=document.getEleme
     </div>
     <aside class="polyPanel">
   <h3>POLYPHONIC SYNTH</h3>
-  <div class="oscArea">
-    <div class="oscTitle">OSC 1</div>
-    <div class="polyWaves"><button class="btn active" id="polySaw">SAW</button><button class="btn" id="polySquare">PULSE</button><button class="btn" id="polyTriangle">TRI</button></div>
-    <div class="oscTitle">OSC 2</div>
-    <div class="polyWaves"><button class="btn active" id="poly2Saw">SAW</button><button class="btn" id="poly2Pulse">PULSE</button><button class="btn" id="poly2Triangle">TRI</button></div>
-    <div id="polyOscControls" class="polyControls"></div>
+
+  <div class="dualOscArea">
+    <div class="oscBox">
+      <div class="oscBoxTitle">OSC 1</div>
+      <div class="polyWaves"><button class="btn active" id="polySaw">SAW</button><button class="btn" id="polySquare">PULSE</button><button class="btn" id="polyTriangle">TRI</button></div>
+      <div id="polyOsc1Controls" class="oscControlGrid"></div>
+    </div>
+
+    <div class="oscBox">
+      <div class="oscBoxTitle">OSC 2</div>
+      <div class="polyWaves"><button class="btn active" id="poly2Saw">SAW</button><button class="btn" id="poly2Pulse">PULSE</button><button class="btn" id="poly2Triangle">TRI</button></div>
+      <div id="polyOsc2Controls" class="oscControlGrid"></div>
+    </div>
   </div>
+
+  <div class="polyUtilityRow">
+    <div id="polyUtilityControls" class="polyUtilityControls"></div>
+    <div class="polyOscLfoWrap">
+      <div class="polyOscLfoTitle">LFO OSC</div>
+      <div id="polyOscLfoControls"></div>
+    </div>
+  </div>
+
   <div class="polyDivider"></div>
   <div id="polyMainControls" class="polyControls"></div>
   <div class="polyDivider"></div>
-  <div class="polyLfoTitle">3 × LFO + EQ</div>
+
+  <div class="polyLfoTitle">MODULATION / EQ</div>
   <div id="polyLfoControls" class="polyLfoControls">
     <div class="polyEqLfoSlot">
       <div class="polyBoxTitle">3-BAND EQ</div>
       <div id="polyEqControls" class="polyLowerControls"></div>
     </div>
   </div>
+
   <div class="polyPanelBottom">
     <div class="polyFxBox polyFxRight">
       <div class="tabs">
@@ -890,7 +915,9 @@ const notes2=["C3","B2","A#2","A2","G#2","G2","F#2","F2","E2","D#2","D2","C#2","
 const F={"C1":32.703,"C#1":34.648,"D1":36.708,"D#1":38.891,"E1":41.203,"F1":43.654,"F#1":46.249,"G1":48.999,"G#1":51.913,"A1":55,"A#1":58.27,"B1":61.735,"C2":65.406,"C#2":69.296,"D2":73.416,"D#2":77.782,"E2":82.407,"F2":87.307,"F#2":92.499,"G2":97.999,"G#2":103.826,"A2":110,"A#2":116.541,"B2":123.471,"C3":130.813};
 
 function noteFreq(note){const m=/^([A-G])(#?)(-?\d+)$/.exec(note);if(!m)return 440;const sem={C:0,D:2,E:4,F:5,G:7,A:9,B:11}[m[1]]+(m[2]?1:0),midi=(Number(m[3])+1)*12+sem;return 440*Math.pow(2,(midi-69)/12)}
-const PS={pageLevel:80,wave:"sawtooth",wave2:"sawtooth",oscMix:50,pulseWidth:50,pwmDepth:0,pwmRate:22,
+const PS={pageLevel:80,wave:"sawtooth",wave2:"sawtooth",
+osc1Oct:50,osc1Semi:50,osc1Fine:50,osc1Level:100,osc1Pitch:50,osc1PulseWidth:50,osc1PwmDepth:0,osc1PwmRate:22,
+osc2Oct:50,osc2Semi:50,osc2Fine:50,osc2Level:100,osc2Pitch:50,osc2PulseWidth:50,osc2PwmDepth:0,osc2PwmRate:22,
 cutoff:62,filterEnv:50,resonance:28,attack:8,decay:38,sustain:62,release:48,
 detune:50,osc2Oct:50,osc2Pitch:50,spread:55,level:100,globalOct:50,noiseMix:0,portamento:0,
 velCut:0,velRes:0,velDecay:0,velLevel:0,
@@ -904,6 +931,22 @@ lfos:[
  {target:"pitch",wave:"sine",rate:20,depth:0}
 ]};
 
+if(!Number.isFinite(PS.osc1Oct))PS.osc1Oct=50;
+if(!Number.isFinite(PS.osc1Semi))PS.osc1Semi=50;
+if(!Number.isFinite(PS.osc1Fine))PS.osc1Fine=50;
+if(!Number.isFinite(PS.osc1Level))PS.osc1Level=100;
+if(!Number.isFinite(PS.osc1Pitch))PS.osc1Pitch=50;
+if(!Number.isFinite(PS.osc1PulseWidth))PS.osc1PulseWidth=Number.isFinite(PS.pulseWidth)?PS.pulseWidth:50;
+if(!Number.isFinite(PS.osc1PwmDepth))PS.osc1PwmDepth=Number.isFinite(PS.pwmDepth)?PS.pwmDepth:0;
+if(!Number.isFinite(PS.osc1PwmRate))PS.osc1PwmRate=Number.isFinite(PS.pwmRate)?PS.pwmRate:22;
+if(!Number.isFinite(PS.osc2Oct))PS.osc2Oct=Number.isFinite(PS.osc2Oct)?PS.osc2Oct:50;
+if(!Number.isFinite(PS.osc2Semi))PS.osc2Semi=50;
+if(!Number.isFinite(PS.osc2Fine))PS.osc2Fine=Number.isFinite(PS.detune)?PS.detune:50;
+if(!Number.isFinite(PS.osc2Level))PS.osc2Level=100;
+if(!Number.isFinite(PS.osc2Pitch))PS.osc2Pitch=Number.isFinite(PS.osc2Pitch)?PS.osc2Pitch:50;
+if(!Number.isFinite(PS.osc2PulseWidth))PS.osc2PulseWidth=Number.isFinite(PS.pulseWidth)?PS.pulseWidth:50;
+if(!Number.isFinite(PS.osc2PwmDepth))PS.osc2PwmDepth=Number.isFinite(PS.pwmDepth)?PS.pwmDepth:0;
+if(!Number.isFinite(PS.osc2PwmRate))PS.osc2PwmRate=Number.isFinite(PS.pwmRate)?PS.pwmRate:22;
 if(!Array.isArray(PS.lfos))PS.lfos=[];
 while(PS.lfos.length<4)PS.lfos.push({target:"pitch",wave:"sine",rate:20,depth:0});
 if(PS.lfos[3]){PS.lfos[3].target="pitch";if(!["sine","triangle"].includes(PS.lfos[3].wave))PS.lfos[3].wave="sine"};
@@ -992,7 +1035,10 @@ const polyTriangle=document.getElementById("polyTriangle");
 const poly2Saw=document.getElementById("poly2Saw");
 const poly2Pulse=document.getElementById("poly2Pulse");
 const poly2Triangle=document.getElementById("poly2Triangle");
-const polyOscControls=document.getElementById("polyOscControls");
+const polyOsc1Controls=document.getElementById("polyOsc1Controls");
+const polyOsc2Controls=document.getElementById("polyOsc2Controls");
+const polyUtilityControls=document.getElementById("polyUtilityControls");
+const polyOscLfoControls=document.getElementById("polyOscLfoControls");
 const polyMainControls=document.getElementById("polyMainControls");
 const polyFxControls=document.getElementById("polyFxControls");
 const patternBank=document.getElementById("patternBank");
@@ -1212,20 +1258,29 @@ function shimmerLayers(freq,t,level,sendNode){if(!ctx||!sendNode||!Number.isFini
 let prevPolyFreq=0,prevPolyStamp=-1,polyChordPrev=0;
 function polyHit(note,t,velocity=85){
  if(!Number.isFinite(PS.reverbType))PS.reverbType=2;
- const baseFreq=noteFreq(note);if(!baseFreq)return;const mods=polyModVals(t,velocity),globalOct=Math.round((PS.globalOct-50)/25),freq=baseFreq*Math.pow(2,globalOct)*Math.pow(2,mods.pitch/12);
+ const baseFreq=noteFreq(note);if(!baseFreq)return;const mods=polyModVals(t,velocity);
+ const osc1Oct=Math.round((PS.osc1Oct-50)/25),osc1Semi=Math.round((PS.osc1Semi-50)/50*12),osc1Pitch=(PS.osc1Pitch-50)/50*12,osc1Fine=PS.osc1Fine-50;
+ const osc2Oct=Math.round((PS.osc2Oct-50)/25),osc2Semi=Math.round((PS.osc2Semi-50)/50*12),osc2Pitch=(PS.osc2Pitch-50)/50*12,osc2Fine=PS.osc2Fine-50;
+ const freq1=baseFreq*Math.pow(2,osc1Oct)*Math.pow(2,(osc1Semi+osc1Pitch+mods.pitch)/12);
+ const freq2=baseFreq*Math.pow(2,osc2Oct)*Math.pow(2,(osc2Semi+osc2Pitch+mods.pitch)/12);
+ const freq=(freq1+freq2)*.5;
  const pan=ctx.createStereoPanner(),eqL=ctx.createBiquadFilter(),eqM=ctx.createBiquadFilter(),eqH=ctx.createBiquadFilter(),rich=ctx.createWaveShaper(),filt=ctx.createBiquadFilter(),amp=ctx.createGain(),o1=ctx.createOscillator(),o2=ctx.createOscillator(),sub=ctx.createOscillator(),g1=ctx.createGain(),g2=ctx.createGain(),subG=ctx.createGain(),cs=ctx.createGain(),ds=ctx.createGain(),rs=ctx.createGain();let pitchLfo=null,pitchDepth=null;
- const pwmHz=.03+Math.pow(PS.pwmRate/100,1.7)*5,phase=Math.sin(t*Math.PI*2*pwmHz),width=Math.max(2,Math.min(98,PS.pulseWidth+phase*(PS.pwmDepth/100)*72)),pw=pulsePeriodicWave(ctx,width);
- if(PS.wave==="pulse")o1.setPeriodicWave(pw);else o1.type=PS.wave;if(PS.wave2==="pulse")o2.setPeriodicWave(pw);else o2.type=PS.wave2;
- const oct=Math.round((PS.osc2Oct-50)/25),semi=(PS.osc2Pitch-50)/50*12,fine=PS.detune-50;
- const f2=freq*Math.pow(2,oct)*Math.pow(2,semi/12),glide=.012+PS.portamento/100*.46;
+ const pwmHz1=.03+Math.pow(PS.osc1PwmRate/100,1.7)*5,phase1=Math.sin(t*Math.PI*2*pwmHz1),width1=Math.max(2,Math.min(98,PS.osc1PulseWidth+phase1*(PS.osc1PwmDepth/100)*72));
+ const pwmHz2=.03+Math.pow(PS.osc2PwmRate/100,1.7)*5,phase2=Math.sin(t*Math.PI*2*pwmHz2),width2=Math.max(2,Math.min(98,PS.osc2PulseWidth+phase2*(PS.osc2PwmDepth/100)*72));
+ if(PS.wave==="pulse")o1.setPeriodicWave(pulsePeriodicWave(ctx,width1));else o1.type=PS.wave;
+ if(PS.wave2==="pulse")o2.setPeriodicWave(pulsePeriodicWave(ctx,width2));else o2.type=PS.wave2;
+ const glide=.012+PS.portamento/100*.46;
  const sameChord=Math.abs(t-prevPolyStamp)<.0005;
  if(!sameChord){polyChordPrev=prevPolyFreq;prevPolyStamp=t}
  const polyPrevForVoice=polyChordPrev;
  if(PS.portamento>0&&polyPrevForVoice>0){
-   o1.frequency.setValueAtTime(polyPrevForVoice,t);o1.frequency.exponentialRampToValueAtTime(freq,t+glide);
-   o2.frequency.setValueAtTime(polyPrevForVoice*Math.pow(2,oct)*Math.pow(2,semi/12),t);o2.frequency.exponentialRampToValueAtTime(f2,t+glide)
- }else{o1.frequency.value=freq;o2.frequency.value=f2}
- o2.detune.value=fine;sub.type="sine";sub.frequency.value=freq/2;prevPolyFreq=freq;
+   const prev1=polyPrevForVoice*Math.pow(2,osc1Oct)*Math.pow(2,(osc1Semi+osc1Pitch)/12);
+   const prev2=polyPrevForVoice*Math.pow(2,osc2Oct)*Math.pow(2,(osc2Semi+osc2Pitch)/12);
+   o1.frequency.setValueAtTime(prev1,t);o1.frequency.exponentialRampToValueAtTime(freq1,t+glide);
+   o2.frequency.setValueAtTime(prev2,t);o2.frequency.exponentialRampToValueAtTime(freq2,t+glide)
+ }else{o1.frequency.value=freq1;o2.frequency.value=freq2}
+ o1.detune.value=osc1Fine;o2.detune.value=osc2Fine;
+ sub.type="sine";sub.frequency.value=Math.min(freq1,freq2)/2;prevPolyFreq=baseFreq;
  const l4=PS.lfos[3]||{wave:"sine",rate:20,depth:0};
  if(l4.depth>.05){
    pitchLfo=ctx.createOscillator();pitchDepth=ctx.createGain();
@@ -1233,7 +1288,7 @@ function polyHit(note,t,velocity=85){
    pitchDepth.gain.value=1200*Math.pow(Math.max(0,Math.min(100,l4.depth))/100,2);
    pitchLfo.connect(pitchDepth);pitchDepth.connect(o1.detune);pitchDepth.connect(o2.detune);pitchDepth.connect(sub.detune)
  }
- g1.gain.value=(1-PS.oscMix/100)*.88;g2.gain.value=(PS.oscMix/100)*.88;subG.gain.value=.16;const spr=Math.pow(Math.max(0,Math.min(100,PS.spread))/100,.48)*.99;pan.pan.value=(Math.random()*2-1)*spr;
+ g1.gain.value=(PS.osc1Level/100)*.72;g2.gain.value=(PS.osc2Level/100)*.72;subG.gain.value=.14;const spr=Math.pow(Math.max(0,Math.min(100,PS.spread))/100,.48)*.99;pan.pan.value=(Math.random()*2-1)*spr;
  filt.type="lowpass";filt.Q.value=.5+mods.resonance/100*14;const base=180+mods.cutoff/100*8000,peak=Math.min(16000,base+PS.filterEnv/100*6500);filt.frequency.setValueAtTime(peak,t);filt.frequency.exponentialRampToValueAtTime(base,t+.04+mods.decay/100*.7);
  const a=.002+PS.attack/100*.35,d=.03+mods.decay/100*.8,r=.05+PS.release/100*1.6,s=.08+PS.sustain/100*.82,pk=(mods.level/100)*(polyMuted?0:Math.max(0,Math.min(1,polyVol)))*.30;
  amp.gain.setValueAtTime(.0001,t);amp.gain.linearRampToValueAtTime(pk,t+a);amp.gain.exponentialRampToValueAtTime(Math.max(.001,pk*s),t+a+d);amp.gain.setValueAtTime(Math.max(.001,pk*s),t+a+d+.11);amp.gain.exponentialRampToValueAtTime(.001,t+a+d+.11+r);
@@ -1504,20 +1559,47 @@ setBassWave(BP.wave||"sawtooth");
 function setPolyOct(o){polyOct=o;window.polyOct=o;polyOctDn.classList.toggle("active",o===-1);polyOct0.classList.toggle("active",o===0);polyOctUp.classList.toggle("active",o===1);POLY_NOTES=polyViewNotes();renderPoly()}polyOctDn.onclick=()=>setPolyOct(-1);polyOct0.onclick=()=>setPolyOct(0);polyOctUp.onclick=()=>setPolyOct(1);
 function polyCtrl(parent,key,label,reset,fmt=null){
  if(typeof parent==="string")parent=document.getElementById(parent);
- let w=document.createElement("div");w.innerHTML=`<div class="lab">${label}</div>`;let k=document.createElement("div");k.className="knob";let v=document.createElement("div");v.className="val";w.appendChild(k);w.appendChild(v);
+ let w=document.createElement("div");w.innerHTML=`<div class="lab">${label}</div>`;
+ let k=document.createElement("div");k.className="knob";
+ let v=document.createElement("div");v.className="val";
+ w.appendChild(k);w.appendChild(v);
  if(parent&&typeof parent.appendChild==="function")parent.appendChild(w);
- const gv=()=>key==="delayTime"?PS[key]/8*100:PS[key],paint=()=>{setKnob(k,gv());v.textContent=fmt?fmt(PS[key]):Math.round(PS[key])};
- knob(k,gv,x=>{PS[key]=key==="delayTime"?Math.round(x/100*8):x},key==="delayTime"?reset/8*100:reset,paint)
+ const paint=()=>{setKnob(k,PS[key]);v.textContent=fmt?fmt(PS[key]):Math.round(PS[key])};
+ knob(k,()=>PS[key],x=>PS[key]=x,reset,paint)
 }
+
+const octFmt=x=>String(Math.round((x-50)/25));
+const semiFmt=x=>`${Math.round((x-50)/50*12)}st`;
+const fineFmt=x=>`${Math.round(x-50)}c`;
+const pitchFmt=x=>`${Math.round((x-50)/50*12)}st`;
+
 [
- ["globalOct","GLOBAL OCT",50,x=>String(Math.round((x-50)/25))],["oscMix","OSC MIX",50],["detune","OSC2 FINE",50,x=>`${Math.round(x-50)}c`],["osc2Oct","OSC2 OCT",50,x=>String(Math.round((x-50)/25))],
- ["osc2Pitch","OSC2 PITCH",50,x=>`${Math.round((x-50)/50*12)}st`],["pulseWidth","PULSE WIDTH",50],["pwmDepth","PWM DEPTH",0],["pwmRate","PWM RATE",22],["noiseMix","NOISE MIX",0],["portamento","PORTA",0]
-].forEach(x=>polyCtrl(polyOscControls,...x));
-const polyOscLfoWrap=document.createElement("div");
-polyOscLfoWrap.className="polyOscLfoWrap";
-polyOscLfoWrap.innerHTML='<div class="polyOscLfoTitle">LFO OSC</div><div id="polyOscLfoControls"></div>';
-polyOscControls.appendChild(polyOscLfoWrap);
-const polyOscLfoControls=document.getElementById("polyOscLfoControls");
+ ["osc1Oct","OCTAVE",50,octFmt],
+ ["osc1Semi","SEMI",50,semiFmt],
+ ["osc1Fine","FINE",50,fineFmt],
+ ["osc1Level","LEVEL",100,x=>Math.round(x)],
+ ["osc1Pitch","PITCH",50,pitchFmt],
+ ["osc1PulseWidth","PWM WIDTH",50],
+ ["osc1PwmDepth","PWM DEPTH",0],
+ ["osc1PwmRate","PWM RATE",22]
+].forEach(x=>polyCtrl(polyOsc1Controls,...x));
+
+[
+ ["osc2Oct","OCTAVE",50,octFmt],
+ ["osc2Semi","SEMI",50,semiFmt],
+ ["osc2Fine","FINE",50,fineFmt],
+ ["osc2Level","LEVEL",100,x=>Math.round(x)],
+ ["osc2Pitch","PITCH",50,pitchFmt],
+ ["osc2PulseWidth","PWM WIDTH",50],
+ ["osc2PwmDepth","PWM DEPTH",0],
+ ["osc2PwmRate","PWM RATE",22]
+].forEach(x=>polyCtrl(polyOsc2Controls,...x));
+
+[
+ ["noiseMix","NOISE MIX",0],
+ ["portamento","PORTA",0]
+].forEach(x=>polyCtrl(polyUtilityControls,...x));
+
 [
  ["cutoff","CUTOFF",62],
  ["resonance","RESON",28],
@@ -1532,48 +1614,58 @@ const polyOscLfoControls=document.getElementById("polyOscLfoControls");
  ["velDecay","VEL→DEC",0],
  ["velLevel","VEL→LEVEL",0]
 ].forEach(x=>polyCtrl(polyMainControls,...x));
+
+function makePolyLfoCard(l,i,oscMode=false){
+ const names=["CUTOFF","RESON","DECAY","PITCH"];
+ let card=document.createElement("div");
+ card.className=oscMode?"polyOscLfoCard":"polyLfoCard";
+ let title=document.createElement("div");
+ if(!oscMode)title.innerHTML=`<b>LFO ${i+1}</b><br><span class="lab">${names[i]}</span>`;
+ let wave=document.createElement("button");
+ wave.className="lfoWave "+(l.wave==="sine"?"sine":"");
+ wave.textContent=i===3?(l.wave==="sine"?"SINE":"TRI"):(l.wave==="sine"?"SINE":"RND");
+ wave.onclick=()=>{
+   if(i===3)l.wave=l.wave==="sine"?"triangle":"sine";
+   else l.wave=l.wave==="sine"?"random":"sine";
+   renderPolyLfos()
+ };
+ function mk(key,label,def){
+   let w=document.createElement("div");w.innerHTML=`<div class="lab">${label}</div>`;
+   let k=document.createElement("div");k.className="knob";
+   let v=document.createElement("div");v.className="val";
+   w.appendChild(k);w.appendChild(v);
+   const paint=()=>{
+     setKnob(k,l[key]);
+     const hz=polyLfoHz(l.rate,3);
+     v.textContent=(i===3&&key==="rate")?(hz<10?hz.toFixed(1):Math.round(hz))+"Hz":Math.round(l[key])
+   };
+   knob(k,()=>l[key],x=>l[key]=x,def,paint);return w
+ }
+ if(!oscMode)card.appendChild(title);
+ card.appendChild(wave);
+ card.appendChild(mk("rate","RATE",[16,12,9,20][i]));
+ card.appendChild(mk("depth","DEPTH",0));
+ return card
+}
+
 function renderPolyLfos(){
  const eqSlot=polyLfoControls.querySelector(".polyEqLfoSlot");
  polyLfoControls.querySelectorAll(".polyLfoCard").forEach(x=>x.remove());
  polyOscLfoControls.innerHTML="";
- const names=["CUTOFF","RESON","DECAY","PITCH"];
-
- function makeCard(l,i,oscMode=false){
-   let card=document.createElement("div");card.className=oscMode?"polyOscLfoCard":"polyLfoCard";
-   let title=document.createElement("div");
-   if(!oscMode)title.innerHTML=`<b>LFO ${i+1}</b><br><span class="lab">${names[i]}</span>`;
-   let wave=document.createElement("button");wave.className="lfoWave "+(l.wave==="sine"?"sine":"");
-   wave.textContent=i===3?(l.wave==="sine"?"SINE":"TRI"):(l.wave==="sine"?"SINE":"RND");
-   wave.onclick=()=>{if(i===3)l.wave=l.wave==="sine"?"triangle":"sine";else l.wave=l.wave==="sine"?"random":"sine";renderPolyLfos()};
-
-   function mk(key,label,def){
-     let w=document.createElement("div");w.innerHTML=`<div class="lab">${label}</div>`;
-     let k=document.createElement("div");k.className="knob";
-     let v=document.createElement("div");v.className="val";
-     w.appendChild(k);w.appendChild(v);
-     const paint=()=>{
-       setKnob(k,l[key]);
-       const hz=polyLfoHz(l.rate,3);
-       v.textContent=(i===3&&key==="rate")?(hz<10?hz.toFixed(1):Math.round(hz))+"Hz":Math.round(l[key])
-     };
-     knob(k,()=>l[key],x=>l[key]=x,def,paint);return w
-   }
-
-   if(!oscMode)card.appendChild(title);
-   card.appendChild(wave);
-   card.appendChild(mk("rate","RATE",[16,12,9,20][i]));
-   card.appendChild(mk("depth","DEPTH",0));
-   return card
- }
-
  PS.lfos.forEach((l,i)=>{
-   if(i===3)polyOscLfoControls.appendChild(makeCard(l,i,true));
-   else polyLfoControls.insertBefore(makeCard(l,i,false),eqSlot)
+   if(i===3)polyOscLfoControls.appendChild(makePolyLfoCard(l,i,true));
+   else polyLfoControls.insertBefore(makePolyLfoCard(l,i,false),eqSlot)
  })
 }
 renderPolyLfos();
+
 let polyFxSelected=sessionStorage.getItem("wtmPolyFx")||"polyChorusPane";
-function activatePolyFx(paneId){polyFxSelected=paneId||"polyChorusPane";sessionStorage.setItem("wtmPolyFx",polyFxSelected);document.querySelectorAll(".polyFxTab").forEach(x=>x.classList.toggle("active",x.dataset.polyPane===polyFxSelected));document.querySelectorAll(".polyFxPane").forEach(x=>x.classList.toggle("active",x.id===polyFxSelected))}
+function activatePolyFx(paneId){
+ polyFxSelected=paneId||"polyChorusPane";
+ sessionStorage.setItem("wtmPolyFx",polyFxSelected);
+ document.querySelectorAll(".polyFxTab").forEach(x=>x.classList.toggle("active",x.dataset.polyPane===polyFxSelected));
+ document.querySelectorAll(".polyFxPane").forEach(x=>x.classList.toggle("active",x.id===polyFxSelected))
+}
 document.querySelectorAll(".polyFxTab").forEach(t=>t.onclick=()=>activatePolyFx(t.dataset.polyPane));
 activatePolyFx(polyFxSelected);
 
@@ -1590,7 +1682,17 @@ function polyCtrlTo(parent,key,label,reset,fmt=null){
 [["reverbType","TYPE",2,x=>REV_TYPES[Math.max(0,Math.min(4,Math.round(x)))]],["reverbPre","PRE",18],["reverbDecay","DECAY",48],["reverbWet","WET",0],["reverbTone","TONE",66]].forEach(x=>polyCtrlTo("polyReverbControls",...x));
 
 function setPolyWave(w){PS.wave=w;polySaw.classList.toggle("active",w==="sawtooth");polySquare.classList.toggle("active",w==="pulse");polyTriangle.classList.toggle("active",w==="triangle")}polySaw.onclick=()=>setPolyWave("sawtooth");polySquare.onclick=()=>setPolyWave("pulse");polyTriangle.onclick=()=>setPolyWave("triangle");function setPolyWave2(w){PS.wave2=w;poly2Saw.classList.toggle("active",w==="sawtooth");poly2Pulse.classList.toggle("active",w==="pulse");poly2Triangle.classList.toggle("active",w==="triangle")}poly2Saw.onclick=()=>setPolyWave2("sawtooth");poly2Pulse.onclick=()=>setPolyWave2("pulse");poly2Triangle.onclick=()=>setPolyWave2("triangle");setPolyWave2(PS.wave2||"sawtooth");
-copyPat.onclick=()=>{let j=(bankIndex+1)%8;banks[j]=JSON.parse(JSON.stringify(pat));bankIndex=j;pat=banks[j];patternLength=pat.length||16;viewPage=0;renderBank();renderLengthUI();renderSeq();renderBass();renderPoly()};clearPat.onclick=()=>{const len=pat.length||16;banks[bankIndex]=blank();banks[bankIndex].length=len;pat=banks[bankIndex];patternLength=len;viewPage=0;renderLengthUI();renderSeq();renderBass();renderPoly()};saveBtn.onclick=()=>localStorage.setItem("techno_v41.11b",JSON.stringify({banks,P,BP,PS,bankIndex,machine}));loadBtn.onclick=()=>{let z=JSON.parse(localStorage.getItem("techno_v41.11b")||"null");if(!z)return;for(let i=0;i<8;i++)banks[i]=z.banks[i];Object.assign(P,z.P);Object.assign(BP,z.BP);if(z.PS)Object.assign(PS,z.PS);bankIndex=z.bankIndex||0;pat=banks[bankIndex];machine=z.machine||"808";BP.level=100;PS.level=100;if(!Array.isArray(PS.lfos))PS.lfos=[];while(PS.lfos.length<4)PS.lfos.push({target:"pitch",wave:"sine",rate:20,depth:0});if(PS.lfos[3]){PS.lfos[3].target="pitch";if(!["sine","triangle"].includes(PS.lfos[3].wave))PS.lfos[3].wave="sine"};patternLength=(pat.length||16);viewPage=0;banks.forEach(ensurePatternSize);patternLength=pat.length||16;renderChannels();renderBank();renderLengthUI();renderSeq();renderBass();renderPoly();document.documentElement.setAttribute("data-boot","ok");renderPoly()};
+copyPat.onclick=()=>{let j=(bankIndex+1)%8;banks[j]=JSON.parse(JSON.stringify(pat));bankIndex=j;pat=banks[j];patternLength=pat.length||16;viewPage=0;renderBank();renderLengthUI();renderSeq();renderBass();renderPoly()};clearPat.onclick=()=>{const len=pat.length||16;banks[bankIndex]=blank();banks[bankIndex].length=len;pat=banks[bankIndex];patternLength=len;viewPage=0;renderLengthUI();renderSeq();renderBass();renderPoly()};saveBtn.onclick=()=>localStorage.setItem("techno_v41.12",JSON.stringify({banks,P,BP,PS,bankIndex,machine}));loadBtn.onclick=()=>{let z=JSON.parse(localStorage.getItem("techno_v41.12")||"null");if(!z)return;for(let i=0;i<8;i++)banks[i]=z.banks[i];Object.assign(P,z.P);Object.assign(BP,z.BP);if(z.PS)Object.assign(PS,z.PS);
+if(z.PS){
+ if(!Number.isFinite(z.PS.osc1PulseWidth)&&Number.isFinite(z.PS.pulseWidth))PS.osc1PulseWidth=z.PS.pulseWidth;
+ if(!Number.isFinite(z.PS.osc2PulseWidth)&&Number.isFinite(z.PS.pulseWidth))PS.osc2PulseWidth=z.PS.pulseWidth;
+ if(!Number.isFinite(z.PS.osc1PwmDepth)&&Number.isFinite(z.PS.pwmDepth))PS.osc1PwmDepth=z.PS.pwmDepth;
+ if(!Number.isFinite(z.PS.osc2PwmDepth)&&Number.isFinite(z.PS.pwmDepth))PS.osc2PwmDepth=z.PS.pwmDepth;
+ if(!Number.isFinite(z.PS.osc1PwmRate)&&Number.isFinite(z.PS.pwmRate))PS.osc1PwmRate=z.PS.pwmRate;
+ if(!Number.isFinite(z.PS.osc2PwmRate)&&Number.isFinite(z.PS.pwmRate))PS.osc2PwmRate=z.PS.pwmRate;
+ if(!Number.isFinite(z.PS.osc2Fine)&&Number.isFinite(z.PS.detune))PS.osc2Fine=z.PS.detune;
+}
+bankIndex=z.bankIndex||0;pat=banks[bankIndex];machine=z.machine||"808";BP.level=100;PS.level=100;if(!Array.isArray(PS.lfos))PS.lfos=[];while(PS.lfos.length<4)PS.lfos.push({target:"pitch",wave:"sine",rate:20,depth:0});if(PS.lfos[3]){PS.lfos[3].target="pitch";if(!["sine","triangle"].includes(PS.lfos[3].wave))PS.lfos[3].wave="sine"};patternLength=(pat.length||16);viewPage=0;banks.forEach(ensurePatternSize);patternLength=pat.length||16;renderChannels();renderBank();renderLengthUI();renderSeq();renderBass();renderPoly();document.documentElement.setAttribute("data-boot","ok");renderPoly()};
 renderChannels();renderBank();renderSeq();renderBass();renderPoly();document.documentElement.setAttribute("data-boot","ok");
 </script>
 </body>
