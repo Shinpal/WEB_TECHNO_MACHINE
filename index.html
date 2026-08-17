@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>WEB TECHNO MACHINE v41.12</title>
+<title>WEB TECHNO MACHINE v41.12c</title>
 <style>
 :root{--o:#ff6416;--panel:#3b3b3b;--panel2:#2b2b2b;--edge:#777;--cream:#efe4bd;--beat:#46515b}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -132,13 +132,13 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 
 
-/* v41.12 channel color logic */
+/* v41.12c channel color logic */
 .app.kit909 .channel{background:linear-gradient(#53585d,#363b40)!important}
 .app.kit909 .channel.alt{background:linear-gradient(#344a56,#263b46)!important;border-color:#66899a!important}
 .app.classic808 .channel.alt{background:linear-gradient(#263b45,#1c3039)!important;border-color:#5c7f90!important}
 .app.classic808.kit909 .channel.alt{background:linear-gradient(#354c58,#263b46)!important;border-color:#7496a6!important}
 
-/* v41.12 poly vertical fit */
+/* v41.12c poly vertical fit */
 .polyPanel h3{font-size:11px!important;line-height:12px!important;margin:1px 0 4px!important}
 .polyPanel{padding:6px!important}
 .oscArea{padding:4px!important}
@@ -160,7 +160,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 .polyEqBox .polyLowerControls .knob{width:36px!important;height:36px!important}
 .polyLowerFx{align-items:flex-start!important}
 
-/* v41.12: sequencers always use TECH look */
+/* v41.12c: sequencers always use TECH look */
 .app.classic808 #seq .cell,.app.classic808 #bassGrid .cell,.app.classic808 #polyGrid .cell,
 .app.classic808 #bassAccent .cell,.app.classic808 #bassSlide .cell{
  padding:0!important;border:1px solid #555!important;border-radius:0!important;
@@ -221,7 +221,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 .polyLowerFx{display:none!important}
 
-/* v41.12 POLY main controls: fixed 3-row / 4-column layout */
+/* v41.12c POLY main controls: fixed 3-row / 4-column layout */
 #polyMainControls{
   display:grid!important;
   grid-template-columns:repeat(4,minmax(0,1fr))!important;
@@ -272,7 +272,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 
 
-/* v41.12 — definitive POLY EQ / FX layout */
+/* v41.12c — definitive POLY EQ / FX layout */
 .polyPanel{
   display:flex!important;
   flex-direction:column!important;
@@ -412,7 +412,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 
 
 
-/* v41.12 — move POLY EQ / FX upward */
+/* v41.12c — move POLY EQ / FX upward */
 .polyPanelBottom{
   margin-top:6px!important;
   align-self:stretch!important;
@@ -427,11 +427,11 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   margin:2px 0!important;
 }
 
-/* v41.12 POLY delay: TIME / FEEDBACK / WET / TONE */
+/* v41.12c POLY delay: TIME / FEEDBACK / WET / TONE */
 
 
 
-/* v41.12 POLY DELAY — TIME / FEEDBACK / WET / TONE, aligned with other FX */
+/* v41.12c POLY DELAY — TIME / FEEDBACK / WET / TONE, aligned with other FX */
 #polyDelayPane{
   position:relative!important;
 }
@@ -468,7 +468,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 
 
-/* v41.12 cursor performance */
+/* v41.12c cursor performance */
 .cell.now{
   transition:none!important;
   filter:none!important;
@@ -478,7 +478,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   transition:none!important;
 }
 
-/* v41.12 compositor playhead: note density cannot trigger grid repaint */
+/* v41.12c compositor playhead: note density cannot trigger grid repaint */
 #seq,#bassGrid,#polyGrid{position:relative!important}
 .wtmPlayhead{
  position:absolute!important;
@@ -496,7 +496,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 
 
-/* v41.12 transport recovery: lightweight cursor */
+/* v41.12c transport recovery: lightweight cursor */
 .cell.now{
   outline:1px solid rgba(235,235,235,.72)!important;
   outline-offset:-1px!important;
@@ -505,11 +505,11 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   transition:none!important;
 }
 
-/* v41.12: single cursor system only */
+/* v41.12c: single cursor system only */
 .wtmPlayhead{display:none!important}
 
 
-/* v41.12 — POLY viewport fit */
+/* v41.12c — POLY viewport fit */
 .synthWrap{
   height:828px!important;
   min-height:828px!important;
@@ -542,7 +542,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 }
 
 
-/* v41.12 — independent dual oscillator layout */
+/* v41.12c — independent dual oscillator layout */
 .polyPanel{
   display:flex!important;
   flex-direction:column!important;
@@ -760,6 +760,15 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
   padding:4px 1px!important;
 }
 
+
+/* v41.12cc: restore approved stacked OSC UI */
+.oscBoxTitle{font-size:11px!important;color:#ffd071!important;margin:1px 0 4px!important}
+.oscBox .polyWaves{display:none!important}
+.oscControlGrid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:3px!important}
+.oscControlGrid .knob{width:35px!important;height:35px!important}
+.oscControlGrid .knob:after{left:14px!important;height:13px!important;transform-origin:1px 16px!important}
+.oscControlGrid .lab,.oscControlGrid .val{font-size:6.4px!important;line-height:7px!important}
+.waveKnob{cursor:pointer}
 </style>
 </head>
 <body>
@@ -768,7 +777,7 @@ button{font:inherit}.fit{position:fixed;left:0;top:0;transform-origin:0 0}.app{w
 window.addEventListener("unhandledrejection",function(e){var x=document.getElementById("bootError");if(x){x.style.display="block";x.textContent="Promiseエラー: "+String(e.reason||"unknown");}});</script>
 <div id="fit" class="fit"><div class="app">
 <header class="metal top">
-  <div class="title"><span>WEB TECHNO</span><span>MACHINE <small>v41.12</small></span></div>
+  <div class="title"><span>WEB TECHNO</span><span>MACHINE <small>v41.12c</small></span></div>
   <div class="pages"><button id="drumPageBtn" class="active">DRUM</button><button id="bassPageBtn">BASS</button><button id="synthPageBtn">POLY</button></div>
   <div class="modes kitMini"><button id="m808" class="active">808</button><button id="m909">909</button></div><button class="btn uiModeBtn" id="uiModeBtn">UI 808</button>
   <button class="btn play" id="playTop">▶ PLAY</button>
@@ -834,13 +843,13 @@ window.addEventListener("unhandledrejection",function(e){var x=document.getEleme
 
   <div class="dualOscArea">
     <div class="oscBox">
-      <div class="oscBoxTitle">OSC 1</div>
+      <div class="oscBoxTitle" id="osc1Title">OSC 1 (SAW)</div>
       <div class="polyWaves"><button class="btn active" id="polySaw">SAW</button><button class="btn" id="polySquare">PULSE</button><button class="btn" id="polyTriangle">TRI</button></div>
       <div id="polyOsc1Controls" class="oscControlGrid"></div>
     </div>
 
     <div class="oscBox">
-      <div class="oscBoxTitle">OSC 2</div>
+      <div class="oscBoxTitle" id="osc2Title">OSC 2 (SAW)</div>
       <div class="polyWaves"><button class="btn active" id="poly2Saw">SAW</button><button class="btn" id="poly2Pulse">PULSE</button><button class="btn" id="poly2Triangle">TRI</button></div>
       <div id="polyOsc2Controls" class="oscControlGrid"></div>
     </div>
@@ -1573,6 +1582,19 @@ const semiFmt=x=>`${Math.round((x-50)/50*12)}st`;
 const fineFmt=x=>`${Math.round(x-50)}c`;
 const pitchFmt=x=>`${Math.round((x-50)/50*12)}st`;
 
+function addOscWaveKnob(parent,osc){
+ const w=document.createElement("div"); w.innerHTML='<div class="lab">WAVE</div>';
+ const k=document.createElement("div"); k.className="knob waveKnob";
+ const v=document.createElement("div"); v.className="val"; w.appendChild(k); w.appendChild(v);
+ parent.appendChild(w);
+ const waves=["sawtooth","pulse","triangle"], names=["SAW","PULSE","TRI"];
+ const get=()=>osc===1?(PS.wave||"sawtooth"):(PS.wave2||"sawtooth");
+ const set=(x)=>{ if(osc===1)setPolyWave(x); else setPolyWave2(x); paint(); };
+ const paint=()=>{ let i=Math.max(0,waves.indexOf(get())); setKnob(k,i*50); v.textContent=names[i]; const t=document.getElementById(osc===1?"osc1Title":"osc2Title"); if(t)t.textContent=`OSC ${osc} (${names[i]})`; };
+ k.addEventListener("click",()=>{let i=Math.max(0,waves.indexOf(get()));set(waves[(i+1)%3])});
+ paint();
+}
+addOscWaveKnob(polyOsc1Controls,1);
 [
  ["osc1Oct","OCTAVE",50,octFmt],
  ["osc1Semi","SEMI",50,semiFmt],
@@ -1584,6 +1606,7 @@ const pitchFmt=x=>`${Math.round((x-50)/50*12)}st`;
  ["osc1PwmRate","PWM RATE",22]
 ].forEach(x=>polyCtrl(polyOsc1Controls,...x));
 
+addOscWaveKnob(polyOsc2Controls,2);
 [
  ["osc2Oct","OCTAVE",50,octFmt],
  ["osc2Semi","SEMI",50,semiFmt],
@@ -1682,7 +1705,7 @@ function polyCtrlTo(parent,key,label,reset,fmt=null){
 [["reverbType","TYPE",2,x=>REV_TYPES[Math.max(0,Math.min(4,Math.round(x)))]],["reverbPre","PRE",18],["reverbDecay","DECAY",48],["reverbWet","WET",0],["reverbTone","TONE",66]].forEach(x=>polyCtrlTo("polyReverbControls",...x));
 
 function setPolyWave(w){PS.wave=w;polySaw.classList.toggle("active",w==="sawtooth");polySquare.classList.toggle("active",w==="pulse");polyTriangle.classList.toggle("active",w==="triangle")}polySaw.onclick=()=>setPolyWave("sawtooth");polySquare.onclick=()=>setPolyWave("pulse");polyTriangle.onclick=()=>setPolyWave("triangle");function setPolyWave2(w){PS.wave2=w;poly2Saw.classList.toggle("active",w==="sawtooth");poly2Pulse.classList.toggle("active",w==="pulse");poly2Triangle.classList.toggle("active",w==="triangle")}poly2Saw.onclick=()=>setPolyWave2("sawtooth");poly2Pulse.onclick=()=>setPolyWave2("pulse");poly2Triangle.onclick=()=>setPolyWave2("triangle");setPolyWave2(PS.wave2||"sawtooth");
-copyPat.onclick=()=>{let j=(bankIndex+1)%8;banks[j]=JSON.parse(JSON.stringify(pat));bankIndex=j;pat=banks[j];patternLength=pat.length||16;viewPage=0;renderBank();renderLengthUI();renderSeq();renderBass();renderPoly()};clearPat.onclick=()=>{const len=pat.length||16;banks[bankIndex]=blank();banks[bankIndex].length=len;pat=banks[bankIndex];patternLength=len;viewPage=0;renderLengthUI();renderSeq();renderBass();renderPoly()};saveBtn.onclick=()=>localStorage.setItem("techno_v41.12",JSON.stringify({banks,P,BP,PS,bankIndex,machine}));loadBtn.onclick=()=>{let z=JSON.parse(localStorage.getItem("techno_v41.12")||"null");if(!z)return;for(let i=0;i<8;i++)banks[i]=z.banks[i];Object.assign(P,z.P);Object.assign(BP,z.BP);if(z.PS)Object.assign(PS,z.PS);
+copyPat.onclick=()=>{let j=(bankIndex+1)%8;banks[j]=JSON.parse(JSON.stringify(pat));bankIndex=j;pat=banks[j];patternLength=pat.length||16;viewPage=0;renderBank();renderLengthUI();renderSeq();renderBass();renderPoly()};clearPat.onclick=()=>{const len=pat.length||16;banks[bankIndex]=blank();banks[bankIndex].length=len;pat=banks[bankIndex];patternLength=len;viewPage=0;renderLengthUI();renderSeq();renderBass();renderPoly()};saveBtn.onclick=()=>localStorage.setItem("techno_v41.12c",JSON.stringify({banks,P,BP,PS,bankIndex,machine}));loadBtn.onclick=()=>{let z=JSON.parse(localStorage.getItem("techno_v41.12c")||"null");if(!z)return;for(let i=0;i<8;i++)banks[i]=z.banks[i];Object.assign(P,z.P);Object.assign(BP,z.BP);if(z.PS)Object.assign(PS,z.PS);
 if(z.PS){
  if(!Number.isFinite(z.PS.osc1PulseWidth)&&Number.isFinite(z.PS.pulseWidth))PS.osc1PulseWidth=z.PS.pulseWidth;
  if(!Number.isFinite(z.PS.osc2PulseWidth)&&Number.isFinite(z.PS.pulseWidth))PS.osc2PulseWidth=z.PS.pulseWidth;
